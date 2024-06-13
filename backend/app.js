@@ -1,8 +1,8 @@
 require('dotenv').config();
 const express = require('express');
-const connectDB = require('./backend/db/database'); // Adjust path as necessary
-const bookingRoutes = require('./backend/routes/bookingRoutes'); // Adjust path as necessary
-const customerRoutes = require('./backend/routes/customerRoutes'); // Adjust path as necessary
+const connectDB = require('./db/database'); // Adjust path if necessary
+const bookingRoutes = require('./routes/bookingRoutes'); // Adjust path if necessary
+const customerRoutes = require('./routes/customerRoutes'); // Adjust path if necessary
 const cors = require('cors');
 
 const app = express();
