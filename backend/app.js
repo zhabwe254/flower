@@ -1,16 +1,18 @@
 require('dotenv').config();
 const express = require('express');
-const connectDB = require('./db/database');
-const bookingRoutes = require('./routes/bookingRoutes');
-const customerRoutes = require('./routes/customerRoutes');
+const connectDB = require('./backend/db/database'); // Adjust path as necessary
+const bookingRoutes = require('./backend/routes/bookingRoutes'); // Adjust path as necessary
+const customerRoutes = require('./backend/routes/customerRoutes'); // Adjust path as necessary
+const cors = require('cors');
 
 const app = express();
 
-// Connect to the database
+// Connect to MongoDB
 connectDB();
 
 // Middleware
 app.use(express.json());
+app.use(cors());
 
 // Routes
 app.use('/api/bookings', bookingRoutes);
