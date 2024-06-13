@@ -1,5 +1,0 @@
-express
-mongoose
-cors
-body-parser
-nodemon
